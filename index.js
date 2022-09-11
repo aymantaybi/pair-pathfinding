@@ -21,4 +21,12 @@ const pairs = [
 
 const pathFinder = new PathFinder();
 
-pathFinder.getPath("A", "D", pairs);
+pathFinder.addCell("A", ["B", "D"]);
+pathFinder.addCell("B", ["C", "D"]);
+pathFinder.addCell("C", ["D"]);
+pathFinder.addCell("E", ["D"]);
+
+pathFinder.path("A", "E");
+
+
+console.log(pathFinder.paths)
